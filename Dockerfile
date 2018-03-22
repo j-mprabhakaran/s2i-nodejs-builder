@@ -1,6 +1,7 @@
 FROM openshift/base-centos7
-MAINTAINER 9chakri@gmail.com
-EXPOSE 8080
+MAINTAINER pjayaramanma@dxc.com
+
+EXPOSE 5000
 RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash - && \
     yum install nodejs -y  && yum clean all
 COPY .s2i/bin /usr/local/s2i
